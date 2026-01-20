@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学术论文库 - Preprints Vault</title>
+    <meta name="description" content="学术论文在线库，包含最新的研究论文和预印本">
+    <meta name="keywords" content="论文, 预印本, 学术, 研究">
+    <meta name="author" content="Your Name">
+    
+    <!-- Schema.org 结构化数据（重要！Google Scholar需要这个） -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "学术论文库",
+      "description": "学术论文与预印本在线库",
+      "url": "https://yourusername.github.io/preprint/",
+      "hasPart": []
+    }
+    </script>
+    
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 学术论文库</h1>
+            <p class="subtitle">Preprints & Publications Vault</p>
+            <p class="description">收集我的学术研究论文和预印本，欢迎 Google Scholar 和其他学术搜索引擎检索。</p>
+        </header>
+
+        <nav>
+            <a href="#papers" class="nav-link">论文列表</a>
+            <a href="sitemap.xml" class="nav-link">网站地图</a>
+            <a href="https://github.com/yourusername/preprint" class="nav-link" target="_blank">GitHub</a>
+        </nav>
+
+        <section id="papers" class="papers-section">
+            <h2>已发布论文 (Papers)</h2>
+            <div id="papers-container" class="papers-grid">
+                <!-- 论文卡片将由 JavaScript 动态生成 -->
+                <div class="loading">加载中...</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Your Name. All rights reserved.</p>
+            <p>Built with ❤️ for academic sharing</p>
+        </footer>
+    </div>
+
+    <script src="assets/main.js"></script>
+</body>
+</html>

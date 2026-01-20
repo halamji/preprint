@@ -1,0 +1,307 @@
+📚 学术论文库项目 - 完整文件结构
+Academic Papers Vault - Complete File Structure
+
+preprint/
+│
+├─ 📖 🔴 READ FIRST - 首先阅读
+│  ├─ START_HERE.txt               👈 从这里开始！快速指南
+│  ├─ PROJECT_SUMMARY.md           📋 项目概览
+│  ├─ QUICK_START.md               ⚡ 5分钟快速上手
+│  ├─ DEPLOYMENT.md                🚀 详细部署指南
+│  ├─ CHECKLIST.md                 ✅ 部署检查清单
+│  └─ README.md                    📘 完整项目文档
+│
+├─ 🌐 核心网页文件（必需）
+│  ├─ .nojekyll                    禁用 Jekyll（GitHub Pages）
+│  ├─ index.html                   🌟 主页面 - 论文列表
+│  ├─ sitemap.xml                  🔍 网站地图（重要！）
+│  ├─ robots.txt                   🤖 搜索引擎配置
+│  └─ papers-manifest.json         📊 论文元数据列表
+│
+├─ 📚 论文存储目录
+│  └─ papers/
+│     ├─ example-paper-001/        示例论文
+│     │  ├─ index.html             论文详情页（Google Scholar 元数据）
+│     │  └─ manuscript.pdf         论文 PDF 文件
+│     │
+│     ├─ paper-name-2024/          你的论文1
+│     │  ├─ index.html
+│     │  └─ manuscript.pdf
+│     │
+│     └─ another-paper-2025/       你的论文2
+│        ├─ index.html
+│        └─ manuscript.pdf
+│        
+│  ⚠️  提示：每篇论文都应该有自己的目录
+│
+├─ 🎨 样式和脚本文件
+│  └─ assets/
+│     ├─ style.css                 网站样式
+│     └─ main.js                   页面交互逻辑
+│
+├─ 🔧 工具脚本
+│  ├─ add_paper.py                 ⭐ 快速添加论文脚本
+│  │                                  使用: python3 add_paper.py --title "..." --authors "..." --pdf paper.pdf
+│  │
+│  └─ manage.sh                    🛠️ 项目管理脚本
+│                                     使用: ./manage.sh list|validate|serve|clean
+│
+├─ ⚙️ GitHub 配置
+│  ├─ .github/
+│  │  └─ workflows/
+│  │     └─ deploy.yml             自动部署工作流
+│  │
+│  ├─ .git/                        Git 版本控制（自动创建）
+│  ├─ .gitignore                   Git 忽略规则
+│  └─ LICENSE                      MIT 许可证
+│
+└─ 📄 项目元数据
+   ├─ PROJECT_STRUCTURE.txt        本文件
+   └─ PROJECT_SUMMARY.md           项目完成总结
+
+═════════════════════════════════════════════════════════════════════
+
+🚀 快速部署流程（30 分钟）
+
+第 1 步：个性化配置（10 分钟）
+  1.1 编辑 index.html
+      - 修改网站标题
+      - 修改描述
+      - 更新 GitHub 链接
+      - 替换 "yourusername"
+  
+  1.2 编辑 sitemap.xml
+      - 替换所有 "yourusername.github.io" → 你的实际 URL
+  
+  1.3 编辑 robots.txt
+      - 更新 sitemap 链接
+
+第 2 步：创建 GitHub 仓库（5 分钟）
+  2.1 在 GitHub 上创建新 public 仓库（名称：preprint）
+  2.2 初始化本地 Git：
+      git init
+      git add .
+      git commit -m "Initial commit"
+      git remote add origin https://github.com/yourusername/preprint.git
+      git push -u origin main
+
+第 3 步：启用 GitHub Pages（2 分钟）
+  3.1 仓库 Settings → Pages
+  3.2 Branch: main, Folder: / (root)
+  3.3 保存并等待 1-2 分钟
+
+第 4 步：添加论文（5 分钟）
+  4.1 使用脚本（推荐）：
+      python3 add_paper.py --title "..." --authors "..." --pdf paper.pdf
+  
+  4.2 或手动添加：
+      cp -r papers/example-paper-001 papers/my-paper
+      cp your_paper.pdf papers/my-paper/manuscript.pdf
+      编辑 papers/my-paper/index.html
+
+第 5 步：提交到 GitHub（5 分钟）
+  5.1 git add papers/ sitemap.xml papers-manifest.json
+  5.2 git commit -m "Add paper"
+  5.3 git push origin main
+
+第 6 步：提交到搜索引擎（5 分钟）
+  6.1 Google Search Console：https://search.google.com/search-console
+  6.2 Google Scholar：https://scholar.google.com/intl/en/scholar/inclusion.html
+  
+✅ 等待 2-4 周让 Google Scholar 索引你的论文
+
+═════════════════════════════════════════════════════════════════════
+
+📊 关键文件说明
+
+🌟 index.html - 主页面
+   ├─ 显示所有论文列表
+   ├─ 从 papers-manifest.json 动态加载
+   ├─ Schema.org 结构化数据
+   └─ 完全响应式设计
+
+📄 papers/*/index.html - 论文详情页
+   ├─ Google Scholar meta tags（最重要！）
+   ├─ Schema.org ScholarlyArticle 标记
+   ├─ 完整的论文信息
+   └─ PDF 下载链接
+
+🗺️ sitemap.xml - 网站地图
+   ├─ 告诉 Google 你的所有论文
+   ├─ 包含 Google Scholar 专用元数据
+   ├─ 必须在 Google Search Console 提交
+   └─ 每添加论文都要更新
+
+📊 papers-manifest.json - 论文列表
+   ├─ 存储所有论文的元数据
+   ├─ 主页面自动读取并显示
+   └─ 格式：
+      {
+          "id": "paper-id",
+          "title": "Title",
+          "authors": "Author1, Author2",
+          "date": "2026-01-20",
+          "abstract": "...",
+          "keywords": ["kw1", "kw2"],
+          "pdfUrl": "papers/paper-id/manuscript.pdf",
+          "pageUrl": "papers/paper-id/index.html"
+      }
+
+🐍 add_paper.py - 自动添加论文脚本
+   使用方法：
+   python3 add_paper.py \
+     --title "论文标题" \
+     --authors "作者1,作者2" \
+     --abstract "摘要内容" \
+     --pdf /path/to/paper.pdf \
+     --keywords "关键词1,关键词2"
+   
+   功能：
+   ✅ 创建论文目录
+   ✅ 复制 PDF 文件
+   ✅ 生成 index.html
+   ✅ 更新 sitemap.xml
+   ✅ 更新 papers-manifest.json
+
+🛠️ manage.sh - 项目管理脚本
+   ./manage.sh list      - 列出所有论文
+   ./manage.sh validate  - 验证项目配置
+   ./manage.sh serve     - 本地预览（http://localhost:8000）
+   ./manage.sh clean     - 清理临时文件
+
+═════════════════════════════════════════════════════════════════════
+
+🔑 Google Scholar 关键元标签
+
+必须包含（Required）：
+  <meta name="citation_title" content="...">
+  <meta name="citation_author" content="...">
+  <meta name="citation_publication_date" content="YYYY/MM/DD">
+  <meta name="citation_pdf_url" content="https://...">
+
+强烈推荐（Highly Recommended）：
+  <meta name="citation_abstract_html_url" content="https://...">
+  <meta name="citation_keywords" content="...">
+
+可选（Optional）：
+  <meta name="citation_journal_title" content="...">
+  <meta name="citation_volume" content="...">
+  <meta name="citation_firstpage" content="...">
+
+═════════════════════════════════════════════════════════════════════
+
+📝 典型工作流程
+
+添加新论文：
+  $ python3 add_paper.py \
+      --title "My New Research" \
+      --authors "Me,Colleague" \
+      --abstract "This research..." \
+      --pdf new_paper.pdf
+
+  $ git add papers/ sitemap.xml papers-manifest.json
+  $ git commit -m "Add new paper: My New Research"
+  $ git push origin main
+  
+  ✅ 网站自动更新（1-2 分钟后）
+
+验证和测试：
+  $ ./manage.sh validate    # 检查配置
+  $ ./manage.sh serve       # 本地预览
+
+维护和监控：
+  $ ./manage.sh list        # 查看已发布论文
+  $ ./manage.sh clean       # 清理临时文件
+
+═════════════════════════════════════════════════════════════════════
+
+🎯 SEO 最佳实践
+
+✅ 每篇论文有唯一 URL
+✅ 完整的元数据和描述
+✅ Sitemap.xml 和 robots.txt
+✅ 快速的加载速度
+✅ 移动友好设计
+✅ 正确的 HTML 语义标签
+✅ 定期更新内容
+
+═════════════════════════════════════════════════════════════════════
+
+🚨 重要提醒
+
+⚠️  所有 URL 占位符必须替换
+    - "yourusername" → 你的 GitHub 用户名
+    - "yourusername.github.io/preprint" → 你的实际网址
+
+⚠️  仓库必须是 PUBLIC（公开）
+    - 私有仓库无法被搜索引擎爬取
+
+⚠️  PDF 文件必须可以直接访问
+    - 无需登录或特殊权限
+
+⚠️  元数据必须准确完整
+    - 日期格式：YYYY/MM/DD（注意是斜杠）
+    - 所有 citation_* 标签都很重要
+
+⚠️  定期更新 sitemap
+    - 每添加新论文都要更新 sitemap.xml
+
+═════════════════════════════════════════════════════════════════════
+
+📚 推荐阅读顺序
+
+1️⃣  START_HERE.txt (本文件同级)
+    快速概览，5 分钟
+
+2️⃣  PROJECT_SUMMARY.md
+    项目详细说明，10 分钟
+
+3️⃣  QUICK_START.md
+    快速上手指南，5 分钟
+
+4️⃣  DEPLOYMENT.md
+    完整部署步骤和故障排除，15 分钟
+
+5️⃣  CHECKLIST.md
+    部署检查清单，确保无遗漏
+
+6️⃣  README.md
+    完整参考文档
+
+═════════════════════════════════════════════════════════════════════
+
+🎓 学者档案建议
+
+创建完论文库后，还应该在以下平台创建档案：
+
+☐ Google Scholar
+  → https://scholar.google.com/citations
+
+☐ arXiv (可选)
+  → https://arxiv.org/
+
+☐ ORCID
+  → https://orcid.org/
+
+☐ ResearchGate
+  → https://www.researchgate.net/
+
+☐ LinkedIn
+  → 个人简介中添加论文链接
+
+═════════════════════════════════════════════════════════════════════
+
+✨ 项目完成！
+
+你现在拥有一个专业的学术论文库。
+开始添加你的研究，让世界发现你的学术成果吧！
+
+Happy publishing! 📚✍️
+
+═════════════════════════════════════════════════════════════════════
+
+版本：1.0
+日期：2026-01-20
+许可证：MIT
+
+Questions? Check the documentation files!

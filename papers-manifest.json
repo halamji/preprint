@@ -1,0 +1,15 @@
+[
+    {
+        "id": "example-paper-001",
+        "title": "深度学习在自然语言处理中的应用",
+        "authors": "Your Name, Co-Author Name",
+        "year": 2026,
+        "date": "2026-01-20",
+        "abstract": "本论文对深度学习技术在自然语言处理领域的应用进行了系统的综述和分析。我们讨论了循环神经网络（RNN）、长短期记忆网络（LSTM）、Transformer 等主要模型架构在文本分类、机器翻译、命名实体识别等典型任务中的应用。通过对比不同模型的性能表现，我们提出了一套实用的选型指导框架。实验结果表明，采用预训练的 Transformer 模型能够在多个 NLP 任务上获得最优性能。",
+        "keywords": ["深度学习", "自然语言处理", "神经网络", "Transformer"],
+        "pdfUrl": "papers/example-paper-001/manuscript.pdf",
+        "pageUrl": "papers/example-paper-001/index.html",
+        "arxiv": null,
+        "doi": null
+    }
+]

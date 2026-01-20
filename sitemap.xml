@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:scholar="http://scholar.google.com/metadata">
+    <!-- 主页 -->
+    <url>
+        <loc>https://yourusername.github.io/preprint/</loc>
+        <lastmod>2026-01-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- 示例论文页面 -->
+    <url>
+        <loc>https://yourusername.github.io/preprint/papers/example-paper-001/</loc>
+        <lastmod>2026-01-20</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <scholar:metadata>
+            <scholar:publication_date>2026-01-20</scholar:publication_date>
+            <scholar:pdf_url>https://yourusername.github.io/preprint/papers/example-paper-001/manuscript.pdf</scholar:pdf_url>
+        </scholar:metadata>
+    </url>
+    
+    <!-- 
+    为每篇论文添加一个 URL 条目：
+    <url>
+        <loc>https://yourusername.github.io/preprint/papers/paper-id/</loc>
+        <lastmod>YYYY-MM-DD</lastmod>
+        <changefreq>never</changefreq>
+        <priority>0.8</priority>
+        <scholar:metadata>
+            <scholar:publication_date>YYYY-MM-DD</scholar:publication_date>
+            <scholar:pdf_url>https://yourusername.github.io/preprint/papers/paper-id/manuscript.pdf</scholar:pdf_url>
+        </scholar:metadata>
+    </url>
+    -->
+</urlset>

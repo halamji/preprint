@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>论文：深度学习在自然语言处理中的应用</title>
+    <meta name="description" content="这是一篇关于深度学习在自然语言处理中应用的学术论文。">
+    <meta name="keywords" content="深度学习, 自然语言处理, 神经网络">
+    
+    <!-- Google Scholar 需要的元数据 -->
+    <meta name="citation_title" content="深度学习在自然语言处理中的应用">
+    <meta name="citation_author" content="Your Name">
+    <meta name="citation_author" content="Co-Author Name">
+    <meta name="citation_publication_date" content="2026/01/20">
+    <meta name="citation_pdf_url" content="https://yourusername.github.io/preprint/papers/example-paper-001/manuscript.pdf">
+    <meta name="citation_abstract_html_url" content="https://yourusername.github.io/preprint/papers/example-paper-001/">
+    <meta name="citation_keywords" content="深度学习, 自然语言处理, 神经网络">
+    
+    <!-- Schema.org 结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ScholarlyArticle",
+        "headline": "深度学习在自然语言处理中的应用",
+        "author": [
+            {
+                "@type": "Person",
+                "name": "Your Name"
+            },
+            {
+                "@type": "Person",
+                "name": "Co-Author Name"
+            }
+        ],
+        "datePublished": "2026-01-20",
+        "description": "本论文探讨了深度学习技术在自然语言处理领域的最新应用，包括...",
+        "mainEntity": {
+            "@type": "CreativeWork"
+        }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="../../assets/style.css">
+    <style>
+        .paper-detail {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 20px auto;
+        }
+        
+        .paper-detail h1 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        .paper-detail .authors {
+            color: #3498db;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        .paper-detail .meta-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            background: #f5f7fa;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .meta-label {
+            font-weight: 600;
+            color: #3498db;
+            font-size: 0.85em;
+            margin-bottom: 3px;
+        }
+        
+        .meta-value {
+            color: #2c3e50;
+        }
+        
+        .abstract-section {
+            margin: 25px 0;
+        }
+        
+        .abstract-section h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .abstract-section p {
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+        }
+        
+        .keywords {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 15px 0;
+        }
+        
+        .keyword {
+            background: #3498db;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        
+        .download-section {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 500;
+        }
+        
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: #ecf0f1;
+            color: #2c3e50;
+            border: 1px solid #bdc3c7;
+        }
+        
+        .btn-secondary:hover {
+            background: #bdc3c7;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../../" class="back-link">← 返回论文列表</a>
+        
+        <article class="paper-detail" itemscope itemtype="https://schema.org/ScholarlyArticle">
+            <h1 itemprop="headline">深度学习在自然语言处理中的应用</h1>
+            
+            <div class="authors" itemprop="author">
+                Your Name<sup>1*</sup>, Co-Author Name<sup>2</sup>
+            </div>
+            
+            <div class="meta-info">
+                <div class="meta-item">
+                    <span class="meta-label">发表日期</span>
+                    <span class="meta-value" itemprop="datePublished">2026年1月20日</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">机构</span>
+                    <span class="meta-value">Your University</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">类型</span>
+                    <span class="meta-value">预印本/论文稿</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">语言</span>
+                    <span class="meta-value">中文</span>
+                </div>
+            </div>
+            
+            <section class="abstract-section">
+                <h2>摘要 (Abstract)</h2>
+                <p itemprop="abstract">
+                    本论文对深度学习技术在自然语言处理领域的应用进行了系统的综述和分析。
+                    我们讨论了循环神经网络（RNN）、长短期记忆网络（LSTM）、
+                    Transformer 等主要模型架构在文本分类、机器翻译、命名实体识别等典型任务中的应用。
+                    通过对比不同模型的性能表现，我们提出了一套实用的选型指导框架。
+                    实验结果表明，采用预训练的 Transformer 模型能够在多个 NLP 任务上获得最优性能。
+                </p>
+                
+                <div class="keywords">
+                    <span class="keyword">深度学习</span>
+                    <span class="keyword">自然语言处理</span>
+                    <span class="keyword">神经网络</span>
+                    <span class="keyword">Transformer</span>
+                    <span class="keyword">机器翻译</span>
+                </div>
+            </section>
+            
+            <section class="abstract-section">
+                <h2>关键贡献</h2>
+                <p>
+                    • 系统综述深度学习在 NLP 各个主要任务中的应用<br>
+                    • 提出一套模型选型的实用指导框架<br>
+                    • 基于大规模实验数据的性能对比分析<br>
+                    • 讨论当前存在的挑战和未来研究方向
+                </p>
+            </section>
+            
+            <div class="download-section">
+                <a href="manuscript.pdf" class="btn btn-primary" download>📥 下载 PDF</a>
+                <a href="https://arxiv.org/abs/XXXX.XXXXX" class="btn btn-secondary" target="_blank">arXiv 链接</a>
+                <a href="https://doi.org/XXXXX" class="btn btn-secondary" target="_blank">DOI 链接</a>
+            </div>
+            
+            <section class="abstract-section" style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #ecf0f1;">
+                <h2>引用格式 (Citation)</h2>
+                <pre style="background: #f5f7fa; padding: 15px; border-radius: 5px; overflow-x: auto;">
+Your Name, Co-Author Name. "深度学习在自然语言处理中的应用." 2026.
+
+@article{yourname2026deep,
+  title={深度学习在自然语言处理中的应用},
+  author={Your Name and Co-Author Name},
+  year={2026},
+  url={https://yourusername.github.io/preprint/papers/example-paper-001/}
+}
+                </pre>
+            </section>
+        </article>
+    </div>
+</body>
+</html>

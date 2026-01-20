@@ -1,0 +1,23 @@
+# robots.txt - 引导搜索引擎爬虫
+
+User-agent: *
+Allow: /
+Allow: /papers/
+Allow: /sitemap.xml
+Allow: /index.html
+
+# Google Scholar 相关
+Allow: /papers/*/index.html
+Allow: /papers/*/manuscript.pdf
+
+# 禁止访问
+Disallow: /.git
+Disallow: /assets/*/ 
+Disallow: /.github
+
+# Sitemap
+Sitemap: https://yourusername.github.io/preprint/sitemap.xml
+Sitemap: https://yourusername.github.io/preprint/papers-manifest.json
+
+# 爬虫延迟（可选）
+Crawl-delay: 1
